@@ -13,6 +13,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    @IBAction func clickTheTestBtn(sender: UIButton) {
+        print("只是测试")
+        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("TestViewController")
+        
+        self.presentViewController(vc, animated: true, completion: ({
+                print("还真走了呀")
+            }))
     }
 
     override func didReceiveMemoryWarning() {
