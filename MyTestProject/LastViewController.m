@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view.
 }
 - (void)Tesssss{
-    //测试
+    NSLog(@"GIT");
 }
 - (void)ddTestLog{
     NSLog(@"这里是测试runtime");
