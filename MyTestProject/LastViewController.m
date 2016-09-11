@@ -20,6 +20,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+- (void)Tesssss{
+    
+}
 - (void)ddTestLog{
     NSLog(@"这里是测试runtime");
 }
