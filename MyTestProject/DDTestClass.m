@@ -8,8 +8,15 @@
 
 #import "DDTestClass.h"
 
+@interface DDTestClass ()
+@property (nonatomic,strong) NSString * tee;
+@end
+
 @implementation DDTestClass
 - (void)testdd{
     NSLog(@"DDTestClass");
+}
+- (void)myPrivateMethod:(id)nowId andTest:(NSArray *)arr{
+    NSLog(@"this is my private method");
 }
 @end

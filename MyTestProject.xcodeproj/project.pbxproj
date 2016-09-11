@@ -18,6 +18,7 @@
 		015BB6CE1D810ECC0067901F /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015BB6CD1D810ECC0067901F /* TestViewController.m */; };
 		015BB6D11D818A230067901F /* LastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015BB6D01D818A230067901F /* LastViewController.m */; };
 		015BB6D41D8191550067901F /* DDTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 015BB6D31D8191550067901F /* DDTestClass.m */; };
+		015BB6DA1D8529B80067901F /* NSArray+custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 015BB6D91D8529B80067901F /* NSArray+custom.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		015BB6D01D818A230067901F /* LastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LastViewController.m; sourceTree = "<group>"; };
 		015BB6D21D8191550067901F /* DDTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTestClass.h; sourceTree = "<group>"; };
 		015BB6D31D8191550067901F /* DDTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTestClass.m; sourceTree = "<group>"; };
+		015BB6D81D8529B80067901F /* NSArray+custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+custom.h"; sourceTree = "<group>"; };
+		015BB6D91D8529B80067901F /* NSArray+custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+custom.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				015BB6D01D818A230067901F /* LastViewController.m */,
 				015BB6D21D8191550067901F /* DDTestClass.h */,
 				015BB6D31D8191550067901F /* DDTestClass.m */,
+				015BB6D81D8529B80067901F /* NSArray+custom.h */,
+				015BB6D91D8529B80067901F /* NSArray+custom.m */,
 				015BB69E1D7E853B0067901F /* Main.storyboard */,
 				015BB6A41D7E853B0067901F /* Assets.xcassets */,
 				015BB6A61D7E853B0067901F /* LaunchScreen.storyboard */,
@@ -213,6 +218,7 @@
 				TargetAttributes = {
 					015BB6961D7E853B0067901F = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KXL2E9N2X5;
 					};
 					015BB6AD1D7E853B0067901F = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -279,6 +285,7 @@
 				015BB6A31D7E853B0067901F /* MyTestProject.xcdatamodeld in Sources */,
 				015BB69D1D7E853B0067901F /* ViewController.swift in Sources */,
 				015BB6CE1D810ECC0067901F /* TestViewController.m in Sources */,
+				015BB6DA1D8529B80067901F /* NSArray+custom.m in Sources */,
 				015BB6D11D818A230067901F /* LastViewController.m in Sources */,
 				015BB6D41D8191550067901F /* DDTestClass.m in Sources */,
 				015BB69B1D7E853B0067901F /* AppDelegate.swift in Sources */,
@@ -426,11 +433,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyTestProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DD.MyTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyTestProject/MyTestProject-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -441,11 +451,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyTestProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DD.MyTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyTestProject/MyTestProject-Bridging-Header.h";
 			};
 			name = Release;
@@ -454,10 +467,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MyTestProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DD.MyTestProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyTestProject/MyTestProjectTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyTestProject.app/MyTestProject";
 			};
 			name = Debug;
@@ -466,10 +482,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MyTestProjectTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DD.MyTestProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyTestProject/MyTestProjectTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyTestProject.app/MyTestProject";
 			};
 			name = Release;
@@ -515,6 +533,7 @@
 				015BB6C41D7E853B0067901F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		015BB6C51D7E853B0067901F /* Build configuration list for PBXNativeTarget "MyTestProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +542,7 @@
 				015BB6C71D7E853B0067901F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		015BB6C81D7E853B0067901F /* Build configuration list for PBXNativeTarget "MyTestProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +551,7 @@
 				015BB6CA1D7E853B0067901F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

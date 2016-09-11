@@ -8,6 +8,7 @@
 #import <objc/runtime.h>
 #import "LastViewController.h"
 #import "DDTestClass.h"
+#import "NSArray+custom.h"
 
 @interface LastViewController ()
 
@@ -29,15 +30,20 @@
 }
 - (IBAction)myTestSelect:(id)sender{
     unsigned int onCount;
-    Ivar *ivars = class_copyIvarList([DDTestClass class], &onCount);
+    Method * methods = class_copyMethodList([DDTestClass class], &onCount);
     for (int i=0; i<onCount; i++) {
-        Ivar va = ivars[i];
-        const char * name = ivar_getName(va);
-        const char * type = ivar_getTypeEncoding(va);
-        NSLog(@"%s+%s",name,type);
+        Method nowMethod = methods[i];
+        NSString * name = NSStringFromSelector(method_getName(nowMethod));
+        const char * type = method_getTypeEncoding(nowMethod);
+        NSLog(@"\n%@==%s",name,type);
+        if ([name isEqualToString:@"myPrivateMethod:andTest:"]) {
+            
+        }
     }
-    
-    free(ivars);
+    NSArray * nowAr = [NSArray new];
+    [nowAr DDTestMethod];
+    nowAr.DDTestProperty = @"go go go go ";
+    NSLog(@"%@",nowAr.DDTestProperty);
 }
 
 - (void)didReceiveMemoryWarning {
